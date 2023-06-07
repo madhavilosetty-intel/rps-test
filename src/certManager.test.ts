@@ -51,6 +51,7 @@ describe('certManager tests', () => {
 
   describe('dumpPfx tests', () => {
     test('Pulls the provisioning certificate apart and exports each PEM', () => {
+      // Comments are included
       const nodeForge = new NodeForge()
       const certManager = new CertManager(new Logger('CertManager'), nodeForge)
 
