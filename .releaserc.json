@@ -1,20 +1,12 @@
 {
-  "branches": [
-    "main",
-    "next"
-  ],
+  "branches": ["main",  "next"],
   "plugins": [
     "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
       {
-        "preset": "angular",
-        "writerOpts": {
-          "commitsSort": [
-            "subject",
-            "scope"
-          ]
-        }
+        "changelogFile": "CHANGELOG.md"
       }
     ],
     [
@@ -22,6 +14,7 @@
       {
         "npmPublish": false
       }
-    ]
+    ],
+    "@semantic-release/github"
   ]
 }
